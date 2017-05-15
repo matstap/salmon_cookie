@@ -53,14 +53,15 @@ function domStuff(location) {
     cookies_arr.push(cookiesSold);
   }
 
+  // calculate total cookies sold and push it to list
+  var total = 0;
+  for (var i = 0; i < cookies_arr; i++) {
+    total += cookies_arr[i];
+  }
+
+  cookies_arr.push(total);
 
   // create an UL container in memory
-  // create an empty array for later use
   var list = document.createElement('ul');
-  var list_arr = [];
-
-  for (var i = 0; i < cookies_arr; i++) {
-    
-  }
 
 }
