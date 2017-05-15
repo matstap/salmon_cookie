@@ -36,6 +36,7 @@ var alkai = {
   avgPerSale: 4.6
 };
 
+// need better func name
 function domStuff(location) {
   // create container element in memory
   // add HTML to container and add Location title
@@ -55,8 +56,9 @@ function domStuff(location) {
 
   // calculate total cookies sold
   var totalCookies = 0;
-  for (var i = 0; i < cookies_arr; i++) {
+  for (var i = 0; i < cookies_arr.length; i++) {
     totalCookies += cookies_arr[i];
+    console.log(cookies_arr[i]);
   }
 
 
@@ -88,3 +90,10 @@ function domStuff(location) {
   list.innerHTML = full_list;
   document.body.appendChild(list);
 }
+
+// call func for each location
+domStuff(firstAndPike);
+domStuff(seatac);
+domStuff(seattleCenter);
+domStuff(capitolHill);
+domStuff(alkai);
