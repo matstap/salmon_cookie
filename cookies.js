@@ -44,13 +44,23 @@ function domStuff(location) {
   container.innerHTML = '<p>' + location.location + '</p>';
   document.body.appendChild(container);
 
-  // calculate/store customers per hour
-  var cust_arr = [];
+  // calculate/store cookies per hour
+  var cookies_arr = [];
   for (var i = 0; i < 15; i++) {
     var custNum = location.minCust + Math.floor(Math.random() * (location.maxCust -location.minCust));
-    cust_arr.push(custNum);
+    // cookies per hour = avg cookies sold * custNum (need whole number))
+    var cookiesSold = Math.floor(custNum * location.avgPerSale);
+    cookies_arr.push(cookiesSold);
   }
 
-  //
+
+  // create an UL container in memory
+  // create an empty array for later use
+  var list = document.createElement('ul');
+  var list_arr = [];
+
+  for (var i = 0; i < cookies_arr; i++) {
+    
+  }
 
 }
