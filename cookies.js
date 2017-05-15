@@ -64,4 +64,14 @@ function domStuff(location) {
   // create an UL container in memory
   var list = document.createElement('ul');
 
+  // array of hours
+  var hours = [];
+  for (var i = 6; i < 13; i++) {
+    hours.push(i);
+  }
+  for (var i = 1; i < 9; i++) {
+    hours.push(i);
+  }
+
+
 }
