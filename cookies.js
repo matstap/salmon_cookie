@@ -36,7 +36,7 @@ var alkai = {
   avgPerSale: 4.6
 };
 
-// need better func name
+// displays hourly and total sales as a list in the browser
 function salesInfo(location) {
   // create container element in memory
   // add HTML to container and add Location title
