@@ -81,5 +81,10 @@ function domStuff(location) {
 
   list_arr.push('<li>Total: ' + totalCookies + ' cookies</li>');
 
+  // turn list_arr to string
+  var full_list = list_arr.join('');
 
+  // add li's to ul and append ul
+  list.innerHTML = full_list;
+  document.body.appendChild(list);
 }
