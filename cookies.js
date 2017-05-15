@@ -37,7 +37,7 @@ var alkai = {
 };
 
 // need better func name
-function domStuff(location) {
+function salesInfo(location) {
   // create container element in memory
   // add HTML to container and add Location title
   // add newly created HTML to the DOM
@@ -92,8 +92,8 @@ function domStuff(location) {
 }
 
 // call func for each location
-domStuff(firstAndPike);
-domStuff(seatac);
-domStuff(seattleCenter);
-domStuff(capitolHill);
-domStuff(alkai);
+salesInfo(firstAndPike);
+salesInfo(seatac);
+salesInfo(seattleCenter);
+salesInfo(capitolHill);
+salesInfo(alkai);
