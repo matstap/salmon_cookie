@@ -53,25 +53,33 @@ function domStuff(location) {
     cookies_arr.push(cookiesSold);
   }
 
-  // calculate total cookies sold and push it to list
-  var total = 0;
+  // calculate total cookies sold
+  var totalCookies = 0;
   for (var i = 0; i < cookies_arr; i++) {
-    total += cookies_arr[i];
+    totalCookies += cookies_arr[i];
   }
 
-  cookies_arr.push(total);
 
   // create an UL container in memory
+  // create empty array to store li
   var list = document.createElement('ul');
+  var list_arr = [];
 
   // array of hours
   var hours = [];
   for (var i = 6; i < 13; i++) {
-    hours.push(i);
+    hours.push(i + 'am: ');
   }
   for (var i = 1; i < 9; i++) {
-    hours.push(i);
+    hours.push(i + 'pm: ');
   }
+
+  // fill out li's and push total to end
+  for (var i = 0; i < hours.length; i++) {
+    list_arr.push('<li>' + hours[i] + cookies_arr[i] + ' cookies</li>');
+  }
+
+  list_arr.push('<li>Total: ' + totalCookies + ' cookies</li>');
 
 
 }
