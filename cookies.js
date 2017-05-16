@@ -1,40 +1,19 @@
 'use strict';
 
 //store location objects
-var firstAndPike = {
-  location: '1st and Pike',
-  minCust: 23,
-  maxCust: 65,
-  avgPerSale: 6.3
-};
 
-var seatac = {
-  location: 'SeaTac',
-  minCust: 3,
-  maxCust: 24,
-  avgPerSale: 1.2
-};
+function Store(location, minCust, maxCust, avgPerSale) {
+  this.location = location;
+  this.minCust = minCust;
+  this.maxCust = maxCust;
+  this.avgPerSale = avgPerSale;
+}
 
-var seattleCenter = {
-  location: 'Seattle Center',
-  minCust: 11,
-  maxCust: 38,
-  avgPerSale: 3.7
-};
-
-var capitolHill = {
-  location: 'Capitol Hill',
-  minCust: 20,
-  maxCust: 38,
-  avgPerSale: 2.3
-};
-
-var alkai = {
-  location: 'Alkai',
-  minCust: 2,
-  maxCust: 16,
-  avgPerSale: 4.6
-};
+var firstAndPike = new Store('1st and Pike', 23, 65, 6.3);
+var seatac = new Store('SeaTac', 3, 24, 1.2);
+var seattleCenter = new Store('Seattle Center', 11, 38, 3.7);
+var capitolHill = new Store('Capitol Hill', 20, 38, 2.3);
+var alkai = new Store('Alkai', 2, 16, 4.6);
 
 // displays hourly and total sales as a list in the browser
 function salesInfo(location) {
