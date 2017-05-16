@@ -9,12 +9,25 @@ function Store(location, minCust, maxCust, avgPerSale) {
   this.avgPerSale = avgPerSale;
 }
 
+Store.prototype.render = function() {
+  var table = document.getElementById('myTable');
+  var data = [];
+  data.push('<td>' + this.location + '</td>');
+  //
+  var new_row = document.createElement('tr');
+  new_row.innerHTML = data[0];
+  table.appendChild(new_row);
+};
+
 var firstAndPike = new Store('1st and Pike', 23, 65, 6.3);
 var seatac = new Store('SeaTac', 3, 24, 1.2);
 var seattleCenter = new Store('Seattle Center', 11, 38, 3.7);
 var capitolHill = new Store('Capitol Hill', 20, 38, 2.3);
 var alkai = new Store('Alkai', 2, 16, 4.6);
 
+alkai.render();
+seatac.render();
+/*
 // displays hourly and total sales as a list in the browser
 function salesInfo(location) {
   // create container element in memory
@@ -27,7 +40,7 @@ function salesInfo(location) {
   // calculate/store cookies per hour
   var cookies_arr = [];
   for (var i = 0; i < 15; i++) {
-    var custNum = location.minCust + Math.floor(Math.random() * (location.maxCust -location.minCust));
+    var custNum = location.minCust + Math.floor(Math.random() * (location.maxCust - location.minCust));
     // cookies per hour = avg cookies sold * custNum (need whole number))
     var cookiesSold = Math.floor(custNum * location.avgPerSale);
     cookies_arr.push(cookiesSold);
@@ -76,3 +89,4 @@ salesInfo(seatac);
 salesInfo(seattleCenter);
 salesInfo(capitolHill);
 salesInfo(alkai);
+*/
