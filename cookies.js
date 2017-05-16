@@ -28,7 +28,7 @@ Store.prototype.total = function() {
 };
 
 Store.prototype.render = function() {
-  var table = document.getElementById('myTable');
+  var table = document.getElementById('tabBody');
   var data = [];
   var cookies_arr = this.cookiesPerHour();
   var total = this.total();
@@ -40,7 +40,7 @@ Store.prototype.render = function() {
   }
 
   var new_row = document.createElement('tr');
-  new_row.innerHTML = data;
+  new_row.innerHTML = data.join('');
   table.appendChild(new_row);
 };
 
@@ -50,10 +50,10 @@ var seattleCenter = new Store('Seattle Center', 11, 38, 3.7);
 var capitolHill = new Store('Capitol Hill', 20, 38, 2.3);
 var alkai = new Store('Alkai', 2, 16, 4.6);
 
-var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
+var hours = ['6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm', '5:00pm', '6:00pm', '7:00pm', '8:00pm'];
 
 function addHeadder(hours) {
-  var table = document.getElementById('myTable');
+  var table = document.getElementById('tabHead');
   var new_row = document.createElement('tr');
   var data = [];
 
@@ -61,9 +61,9 @@ function addHeadder(hours) {
   for (var i = 0; i < hours.length; i++) {
     data.push('<td>' + hours[i] + '</td>');
   }
-  data.push('<td>Total</td>');
+  data.push('<td>Daily Location Total</td>');
 
-  new_row.innerHTML = data;
+  new_row.innerHTML = data.join('');
   table.appendChild(new_row);
 }
 
