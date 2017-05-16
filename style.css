@@ -15,11 +15,14 @@ nav {
 
 nav li {
   display: inline-block;
-  margin-left: 70px;
+  margin-top: 30px;
+  margin-left: 90px;
 }
 
 nav li:first-child {
   margin-left: 0px;
+  margin-top: 10px;
+  float:left;
 }
 
 nav a {
@@ -30,7 +33,7 @@ nav a {
 main {
   width: 960px;
   margin: 0 auto;
-  margin-top: 70px;
+  margin-top: 100px;
 }
 
 .main-pic {
@@ -84,4 +87,28 @@ span {
 
 span:last-child {
   border-right: 0px;
+}
+
+footer {
+  margin-top: 30px;
+  height: 140px;
+  width: 100%;
+  background: black;
+}
+
+.footer li {
+  margin-left: 120px;
+  margin-top: 70px;
+}
+
+.footer li:first-child {
+  margin-left: 0;
+  margin-top: 20px;
+  float: left;
+}
+
+.footer li:last-child {
+  color: white;
+  float:right;
+  margin-top: 70px;
 }
