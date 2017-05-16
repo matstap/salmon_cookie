@@ -9,13 +9,40 @@ function Store(location, minCust, maxCust, avgPerSale) {
   this.avgPerSale = avgPerSale;
 }
 
+Store.prototype.cookiesPerHour = function() {
+  var cookies_arr = [];
+  for (var i = 0; i < 15; i++) {
+    var custNum = this.minCust + Math.floor(Math.random() * (this.maxCust - this.minCust));
+    // cookies per hour = avg cookies sold * custNum (need whole number))
+    var cookiesSold = Math.floor(custNum * this.avgPerSale);
+    cookies_arr.push(cookiesSold);
+  }
+  return cookies_arr;
+};
+
+Store.prototype.total = function() {
+  var totalCookies = 0;
+  var cookies_arr = this.cookiesPerHour();
+  for (var i = 0; i < cookies_arr.length; i++) {
+    totalCookies += cookies_arr[i];
+  }
+  return totalCookies;
+};
+
 Store.prototype.render = function() {
   var table = document.getElementById('myTable');
   var data = [];
+  var cookies_arr = this.cookiesPerHour();
+  var total = this.total();
+
+  cookies_arr.push(total);
   data.push('<td>' + this.location + '</td>');
-  //
+  for (var i = 0; i < cookies_arr.length; i++) {
+    data.push('<td>' + cookies_arr[i] + '</td>');
+  }
+
   var new_row = document.createElement('tr');
-  new_row.innerHTML = data[0];
+  new_row.innerHTML = data;
   table.appendChild(new_row);
 };
 
@@ -25,8 +52,30 @@ var seattleCenter = new Store('Seattle Center', 11, 38, 3.7);
 var capitolHill = new Store('Capitol Hill', 20, 38, 2.3);
 var alkai = new Store('Alkai', 2, 16, 4.6);
 
-alkai.render();
+var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
+
+function addHeadder(hours) {
+  var table = document.getElementById('myTable');
+  var newRow = table.insertRow(0);
+
+  var newCell = newRow.insertCell(0);
+  var newText = document.createTextNode('');
+  newCell.appendChild(newText);
+
+  for (var i = 0; i < hours.length; i++) {
+    newCell = newRow.insertCell(i + 1);
+    newText = document.createTextNode(hours[i]);
+    newCell.appendChild(newText);
+  }
+}
+
+firstAndPike.render();
 seatac.render();
+seattleCenter.render();
+capitolHill.render();
+alkai.render();
+
+addHeadder(hours);
 /*
 // displays hourly and total sales as a list in the browser
 function salesInfo(location) {
