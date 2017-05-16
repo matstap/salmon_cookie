@@ -40,6 +40,10 @@ main {
   position: relative;
 }
 
+.main-pic img {
+  width: 100%;
+}
+
 .main-pic h1 {
   position: absolute;
   bottom: 70px;
