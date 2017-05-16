@@ -13,13 +13,31 @@ nav {
 
 nav li {
   display: inline-block;
+  margin-left: 70px;
 }
 
-nav li:last-child {
-  margin-right: 0px;
+nav li:first-child {
+  margin-left: 0px;
 }
 
 nav a {
   color: white;
   text-decoration: none;
+}
+
+main {
+  width: 960px;
+  margin: 0 auto;
+  margin-top: 70px;
+}
+
+.main-pic {
+  position: relative;
+}
+
+.main-pic h1 {
+  position: absolute;
+  bottom: 70px;
+  width: 100%;
+  text-align: center;
 }
