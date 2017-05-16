@@ -56,7 +56,7 @@ function salesInfo(location) {
 
   // calculate total cookies sold
   var totalCookies = 0;
-  for (var i = 0; i < cookies_arr.length; i++) {
+  for (i = 0; i < cookies_arr.length; i++) {
     totalCookies += cookies_arr[i];
     console.log(cookies_arr[i]);
   }
@@ -69,15 +69,15 @@ function salesInfo(location) {
 
   // array of hours
   var hours = [];
-  for (var i = 6; i < 13; i++) {
+  for (i = 6; i < 13; i++) {
     hours.push(i + 'am: ');
   }
-  for (var i = 1; i < 9; i++) {
+  for (i = 1; i < 9; i++) {
     hours.push(i + 'pm: ');
   }
 
   // fill out li's and push total to end
-  for (var i = 0; i < hours.length; i++) {
+  for (i = 0; i < hours.length; i++) {
     list_arr.push('<li>' + hours[i] + cookies_arr[i] + ' cookies</li>');
   }
 
