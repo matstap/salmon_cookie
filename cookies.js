@@ -56,26 +56,26 @@ var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '
 
 function addHeadder(hours) {
   var table = document.getElementById('myTable');
-  var newRow = table.insertRow(0);
+  var new_row = document.createElement('tr');
+  var data = [];
 
-  var newCell = newRow.insertCell(0);
-  var newText = document.createTextNode('');
-  newCell.appendChild(newText);
-
+  data.push('<td></td>');
   for (var i = 0; i < hours.length; i++) {
-    newCell = newRow.insertCell(i + 1);
-    newText = document.createTextNode(hours[i]);
-    newCell.appendChild(newText);
+    data.push('<td>' + hours[i] + '</td>');
   }
+  data.push('<td>Total</td>');
+
+  new_row.innerHTML = data;
+  table.appendChild(new_row);
 }
 
+addHeadder(hours);
 firstAndPike.render();
 seatac.render();
 seattleCenter.render();
 capitolHill.render();
 alkai.render();
 
-addHeadder(hours);
 /*
 // displays hourly and total sales as a list in the browser
 function salesInfo(location) {
