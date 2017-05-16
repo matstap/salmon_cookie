@@ -1,7 +1,5 @@
 'use strict';
 
-//store location objects
-
 function Store(location, minCust, maxCust, avgPerSale) {
   this.location = location;
   this.minCust = minCust;
