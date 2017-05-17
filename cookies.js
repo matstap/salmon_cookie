@@ -74,6 +74,7 @@ function colSums() {
 
   data.push('<td>Totals</td>');
 
+  // iterates through the rows of each column, adding the entries
   for (var col = 1; col < 17; col++) {
     var count = 0;
     for (var row = 0; row < 5; row++) {
