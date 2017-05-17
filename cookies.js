@@ -74,10 +74,13 @@ function colSums() {
 
   data.push('<td>Totals</td>');
 
-  for (var i = 1; i < 17; i++) {
+  for (var col = 1; col < 17; col++) {
     var count = 0;
-    for (var j = 1; j < 5; i++) {
-      count += table.children[j].children[i];
+    for (var row = 0; row < 5; row++) {
+      var numbStr = table.children[row].children[col].innerHTML;
+      console.log(col,row,numbStr);
+      var number = parseInt(numbStr);
+      count += number;
     }
     data.push('<td>' + count + '</td>');
   }
