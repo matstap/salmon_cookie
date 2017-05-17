@@ -1,0 +1,144 @@
+/* Color Scheme: #BF3D2D, #CA776C (rgba(202,119,108,0.19)), #3F140F*/
+
+/*GENERAL*/
+
+h1 {
+  font: 3.5em bold;
+  color: #3F140F;
+}
+
+h2 {
+  font: 2em bold;
+}
+
+button {
+  background: #BF3D2D;
+}
+
+/*ELEMENTS*/
+
+header {
+  position: fixed;
+  top: 0;
+  height: 70px;
+  width: 100%;
+  background: #3F140F;
+  z-index: 999;
+}
+
+nav {
+  width: 960px;
+  margin: 0 auto;
+  z-index: 9999;
+}
+
+nav li {
+  display: inline-block;
+  margin-top: 30px;
+  margin-left: 90px;
+}
+
+nav li:first-child {
+  margin-left: 0px;
+  margin-top: 10px;
+  float:left;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+body {
+  background: rgba(202,119,108,0.19);
+}
+
+main {
+  width: 960px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.main-pic {
+  position: relative;
+  transform: skewY(-5deg);
+  transform-origin: 100%;
+  z-index: -1;
+}
+
+.main-pic img {
+  width: 100%;
+}
+
+.main-pic h1 {
+  position: absolute;
+  bottom: 90px;
+  width: 100%;
+  text-align: center;
+}
+
+.about {
+  width: 760px;
+  margin: 0 auto;
+  margin-top: 120px;
+}
+
+.about p {
+  margin-top: 30px
+}
+
+.order {
+  width: 760px;
+  margin: 0 auto;
+  margin-top: 60px;
+  text-align: center;
+}
+
+.order img, button {
+  margin-top: 30px;
+}
+
+.product {
+  display: block;
+  margin: 0 auto
+}
+
+
+
+span {
+  margin-top: 60px;
+  width: 180px;
+  padding: 20px 0;
+  display: inline-block;
+  border-right: dotted 5px;
+  text-align: center;
+  line-height: 1.5em;
+}
+
+span:last-child {
+  border-right: 0px;
+}
+
+footer {
+  margin-top: 30px;
+  height: 140px;
+  width: 100%;
+  background: #3F140F;
+}
+
+.footer li {
+  margin-left: 120px;
+  margin-top: 70px;
+}
+
+.footer li:first-child {
+  margin-left: 0;
+  margin-top: 20px;
+  float: left;
+}
+
+.footer li:last-child {
+  color: white;
+  float:right;
+  margin-top: 70px;
+}

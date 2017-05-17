@@ -1,0 +1,24 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  padding: 5px;
+}
+
+thead {
+  font-weight: bold;
+}
+
+td {
+  padding: 15px;
+  width: auto;
+  border: solid 1px #dfe2e5;
+  text-align: center;
+}
+
+tr:nth-child(2n) {
+  background: #f6f8fa;
+}
