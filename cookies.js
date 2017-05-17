@@ -15,7 +15,8 @@ function Store(loc, minCust, maxCust, avgPerSale) {
 Store.prototype.cookiesPerHour = function() {
   var cookies_arr = [];
   for (var i = 0; i < 15; i++) {
-    var custNum = this.minCust + Math.floor(Math.random() * (this.maxCust - this.minCust) + 1);
+    //console.log(this.maxCust, this.minCust);
+    var custNum = this.minCust + Math.floor(Math.random() * (this.maxCust - this.minCust + 1));
     // cookies per hour = avg cookies sold * custNum (need whole number))
     var cookiesSold =  Math.floor(custNum * this.avgPerSale);
     cookies_arr.push(cookiesSold);
@@ -35,6 +36,7 @@ Store.prototype.total = function() {
 Store.prototype.render = function() {
   var data = [];
   var cookies_arr = this.cookiesPerHour();
+  //console.log(cookies_arr);
   var total = this.total();
 
   cookies_arr.push(total);
@@ -97,12 +99,13 @@ function formData(event) {
   event.preventDefault();
 
   var loc = event.target.loc.value;
-  var minCust = event.target.minCustomers.value;
-  var maxCust = event.target.maxCustomers.value;
-  var avgPerSale = event.target.perSale.value;
+  var minCust = parseInt(event.target.minCustomers.value);
+  var maxCust = parseInt(event.target.maxCustomers.value);
+  var avgPerSale = parseInt(event.target.perSale.value);
 
   var store = new Store(loc, minCust, maxCust, avgPerSale);
-  console.log(store);
+  console.log(minCust, maxCust, avgPerSale);
+  console.log(store.minCust, store.maxCust);
   store.render();
 }
 
