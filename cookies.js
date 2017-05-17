@@ -1,7 +1,10 @@
 'use strict';
 
-function Store(location, minCust, maxCust, avgPerSale) {
-  this.location = location;
+var tabH = document.getElementById('tabHead');
+var tabB = document.getElementById('tabBody');
+
+function Store(loc, minCust, maxCust, avgPerSale) {
+  this.loc = loc;
   this.minCust = minCust;
   this.maxCust = maxCust;
   this.avgPerSale = avgPerSale;
@@ -28,20 +31,17 @@ Store.prototype.total = function() {
 };
 
 Store.prototype.render = function() {
-  var table = document.getElementById('tabBody');
   var data = [];
   var cookies_arr = this.cookiesPerHour();
   var total = this.total();
 
   cookies_arr.push(total);
-  data.push('<td>' + this.location + '</td>');
+  data.push('<td>' + this.loc + '</td>');
   for (var i = 0; i < cookies_arr.length; i++) {
     data.push('<td>' + cookies_arr[i] + '</td>');
   }
 
-  var new_row = document.createElement('tr');
-  new_row.innerHTML = data.join('');
-  table.appendChild(new_row);
+  addRow(data, tabB);
 };
 
 var firstAndPike = new Store('1st and Pike', 23, 65, 6.3);
@@ -53,8 +53,6 @@ var alkai = new Store('Alkai', 2, 16, 4.6);
 var hours = ['6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm', '5:00pm', '6:00pm', '7:00pm', '8:00pm'];
 
 function addHeadder(hours) {
-  var table = document.getElementById('tabHead');
-  var new_row = document.createElement('tr');
   var data = [];
 
   data.push('<td></td>');
@@ -63,13 +61,10 @@ function addHeadder(hours) {
   }
   data.push('<td>Daily Location Total</td>');
 
-  new_row.innerHTML = data.join('');
-  table.appendChild(new_row);
+  addRow(data, tabH);
 }
 
 function colSums() {
-  var table = document.getElementById('tabBody');
-  var new_row = document.createElement('tr');
   var data = [];
 
   data.push('<td>Totals</td>');
@@ -78,13 +73,18 @@ function colSums() {
   for (var col = 1; col < 17; col++) {
     var count = 0;
     for (var row = 0; row < 5; row++) {
-      var numbStr = table.children[row].children[col].innerHTML;
+      var numbStr = tabB.children[row].children[col].innerHTML;
       console.log(col,row,numbStr);
       var number = parseInt(numbStr);
       count += number;
     }
     data.push('<td>' + count + '</td>');
   }
+  addRow(data, tabB);
+}
+
+function addRow(data, table) {
+  var new_row = document.createElement('tr');
   new_row.innerHTML = data.join('');
   table.appendChild(new_row);
 }
