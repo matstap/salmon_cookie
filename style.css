@@ -1,9 +1,28 @@
+/* Color Scheme: #BF3D2D, #CA776C (rgba(202,119,108,0.19)), #3F140F*/
+
+/*GENERAL*/
+
+h1 {
+  font: 3.5em bold;
+  color: #3F140F;
+}
+
+h2 {
+  font: 2em bold;
+}
+
+button {
+  background: #BF3D2D;
+}
+
+/*ELEMENTS*/
+
 header {
   position: fixed;
   top: 0;
   height: 70px;
   width: 100%;
-  background: black;
+  background: #3F140F;
   z-index: 999;
 }
 
@@ -30,14 +49,21 @@ nav a {
   text-decoration: none;
 }
 
+body {
+  background: rgba(202,119,108,0.19);
+}
+
 main {
   width: 960px;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .main-pic {
   position: relative;
+  transform: skewY(-5deg);
+  transform-origin: 100%;
+  z-index: -1;
 }
 
 .main-pic img {
@@ -46,7 +72,7 @@ main {
 
 .main-pic h1 {
   position: absolute;
-  bottom: 70px;
+  bottom: 90px;
   width: 100%;
   text-align: center;
 }
@@ -54,7 +80,7 @@ main {
 .about {
   width: 760px;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 120px;
 }
 
 .about p {
@@ -97,7 +123,7 @@ footer {
   margin-top: 30px;
   height: 140px;
   width: 100%;
-  background: black;
+  background: #3F140F;
 }
 
 .footer li {
