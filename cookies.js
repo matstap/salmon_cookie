@@ -3,6 +3,8 @@
 var tabH = document.getElementById('tabHead');
 var tabB = document.getElementById('tabBody');
 
+var form = document.getElementById('sales_form');
+
 function Store(loc, minCust, maxCust, avgPerSale) {
   this.loc = loc;
   this.minCust = minCust;
@@ -13,9 +15,9 @@ function Store(loc, minCust, maxCust, avgPerSale) {
 Store.prototype.cookiesPerHour = function() {
   var cookies_arr = [];
   for (var i = 0; i < 15; i++) {
-    var custNum = this.minCust + Math.floor(Math.random() * (this.maxCust - this.minCust));
+    var custNum = this.minCust + Math.floor(Math.random() * (this.maxCust - this.minCust) + 1);
     // cookies per hour = avg cookies sold * custNum (need whole number))
-    var cookiesSold = Math.floor(custNum * this.avgPerSale);
+    var cookiesSold =  Math.floor(custNum * this.avgPerSale);
     cookies_arr.push(cookiesSold);
   }
   return cookies_arr;
@@ -89,10 +91,26 @@ function addRow(data, table) {
   table.appendChild(new_row);
 }
 
+// Form //
+
+function formData(event) {
+  event.preventDefault();
+
+  var loc = event.target.loc.value;
+  var minCust = event.target.minCustomers.value;
+  var maxCust = event.target.maxCustomers.value;
+  var avgPerSale = event.target.perSale.value;
+
+  var store = new Store(loc, minCust, maxCust, avgPerSale);
+  console.log(store);
+  store.render();
+}
+
 addHeadder(hours);
-firstAndPike.render();
+/*firstAndPike.render();
 seatac.render();
 seattleCenter.render();
 capitolHill.render();
-alkai.render();
-colSums();
+alkai.render();*/
+form.addEventListener('submit', formData);
+//colSums();
