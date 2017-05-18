@@ -4,12 +4,28 @@ body {
 }
 
 h1 {
-  font: 2em bold;
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0 auto;
+  width: 1200px;
   padding: 20px;
+  padding-left: 15px;
+  padding-top: 40px;
+}
+
+.block {
+  display: block;
+}
+
+form {
+  width: 1200px;
+  margin: 0 auto;
+
 }
 
 fieldset {
   padding: 20px;
+  padding-left: 0px;
   display: inline-block;
   font-size:
 }
@@ -30,7 +46,6 @@ input[type="text"]:focus {
 }
 
 button {
-  margin-left: 20px;
   margin-bottom: 20px;
   border: none;
   padding: 8px 18px;
@@ -41,9 +56,15 @@ button {
   font-size: 20px;
 }
 
-table {
-  margin-left: 20px;
+section {
+  margin: 0 auto;
+  width: 1200px;
+  overflow: scroll;
   margin-bottom: 80px;
+}
+
+table {
+
 }
 
 thead {

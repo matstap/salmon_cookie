@@ -111,6 +111,7 @@ function formData(event) {
   tabB.deleteRow(rowNum);
   store.render();
   colSums();
+  form.reset();
 }
 
 addHeadder(hours);
