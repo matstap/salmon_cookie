@@ -3,6 +3,11 @@ body {
   font-family: helvetica;
 }
 
+h1 {
+  font: 2em bold;
+  padding: 20px;
+}
+
 fieldset {
   padding: 20px;
   display: inline-block;
@@ -37,10 +42,9 @@ button {
 }
 
 table {
-  padding: 5px;
+  /*padding: 5px;*/
   margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 40px
+  margin-bottom: 80px;
 }
 
 thead {
@@ -56,9 +60,3 @@ td {
 tr:nth-child(2n) {
   background: #f6f8fa;
 }
-/*
-table {
-  margin-left: 20px;
-  margin-bottom: 40px;
-}
-*/
