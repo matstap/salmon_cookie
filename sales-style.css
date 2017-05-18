@@ -63,7 +63,7 @@ button {
 section {
   margin: 0 auto;
   width: 1200px;
-  overflow: scroll;
+  overflow-x: scroll;
   margin-bottom: 80px;
 }
 
