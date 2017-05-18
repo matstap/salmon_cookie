@@ -5,6 +5,9 @@ var tabB = document.getElementById('tabBody');
 
 var form = document.getElementById('sales_form');
 
+// row # hack
+var rowNum = 0;
+
 function Store(loc, minCust, maxCust, avgPerSale) {
   this.loc = loc;
   this.minCust = minCust;
@@ -46,6 +49,7 @@ Store.prototype.render = function() {
   }
 
   addRow(data, tabB);
+  rowNum += 1;
 };
 
 var firstAndPike = new Store('1st and Pike', 23, 65, 6.3);
@@ -76,7 +80,7 @@ function colSums() {
   // iterates through the rows of each column, adding the entries
   for (var col = 1; col < 17; col++) {
     var count = 0;
-    for (var row = 0; row < 5; row++) {
+    for (var row = 0; row < rowNum; row++) {
       var numbStr = tabB.children[row].children[col].innerHTML;
       console.log(col,row,numbStr);
       var number = parseInt(numbStr);
@@ -104,16 +108,16 @@ function formData(event) {
   var avgPerSale = parseInt(event.target.perSale.value);
 
   var store = new Store(loc, minCust, maxCust, avgPerSale);
-  console.log(minCust, maxCust, avgPerSale);
-  console.log(store.minCust, store.maxCust);
+  tabB.deleteRow(rowNum);
   store.render();
+  colSums();
 }
 
 addHeadder(hours);
-/*firstAndPike.render();
+firstAndPike.render();
 seatac.render();
 seattleCenter.render();
 capitolHill.render();
-alkai.render();*/
+alkai.render();
+colSums();
 form.addEventListener('submit', formData);
-//colSums();
