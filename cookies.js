@@ -109,6 +109,19 @@ function formData(event) {
   var avgPerSale = parseInt(event.target.perSale.value);
 
   var store = new Store(loc, minCust, maxCust, avgPerSale);
+
+  for (var i = 0; i < rowNum; i++) {
+    if (loc === tabB.children[i].children[0].innerHTML) {
+      tabB.deleteRow(i);
+      rowNum -= 1;
+      tabB.deleteRow(rowNum);
+      store.render();
+      colSums();
+      form.reset();
+      return;
+    }
+  }
+
   tabB.deleteRow(rowNum);
   store.render();
   colSums();
