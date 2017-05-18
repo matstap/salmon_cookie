@@ -6,6 +6,11 @@ body {
 fieldset {
   padding: 20px;
   display: inline-block;
+  font-size:
+}
+
+button {
+  display: block;
 }
 
 input[type="text"] {
@@ -16,8 +21,7 @@ input[type="text"] {
 }
 
 input[type="text"]:focus {
-  background: #000;
-  color: #fff;
+  background: #f6f8fa;
 }
 
 button {
@@ -25,7 +29,7 @@ button {
   margin-bottom: 20px;
   border: none;
   padding: 8px 18px;
-  background: #000;
+  background: rgba(0,0,0,0.5);
   color: #fff;
   border-radius: 3px;
   cursor: pointer;
