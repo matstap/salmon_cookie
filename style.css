@@ -18,8 +18,6 @@ button {
 /*ELEMENTS*/
 
 header {
-  position: fixed;
-  top: 0;
   height: 70px;
   width: 100%;
   background: #3F140F;
@@ -54,9 +52,14 @@ body {
 }
 
 main {
-  width: 960px;
+  width: 90%;
   margin: 0 auto;
   margin-top: 50px;
+  border: solid 1px;
+}
+
+.clearfix {
+  clear:both;
 }
 
 .main-pic {
@@ -64,23 +67,40 @@ main {
   transform: skewY(-5deg);
   transform-origin: 100%;
   z-index: -1;
+  float:left;
 }
 
 .main-pic img {
-  width: 100%;
+  width: 900px;
 }
 
 .main-pic h1 {
   position: absolute;
   bottom: 90px;
+  left: 220px;
   width: 100%;
-  text-align: center;
+}
+
+.shirt {
+  float: left;
+  margin-left: 65px;
+  position: relative;
+}
+
+.shirt img {
+  width: 400px;
+}
+
+.shirt p {
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }
 
 .about {
-  width: 760px;
+  width: 500px;
   margin: 0 auto;
-  margin-top: 120px;
+  margin-top: 90px;
 }
 
 .about p {
@@ -110,13 +130,8 @@ span {
   width: 180px;
   padding: 20px 0;
   display: inline-block;
-  border-right: dotted 5px;
   text-align: center;
   line-height: 1.5em;
-}
-
-span:last-child {
-  border-right: 0px;
 }
 
 footer {
