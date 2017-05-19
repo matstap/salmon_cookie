@@ -1,6 +1,8 @@
 
 body {
   font-family: helvetica;
+  color: #3F140F;
+  background: rgba(202,119,108,0.19);
 }
 
 h1 {
@@ -35,10 +37,6 @@ fieldset {
   font-size:
 }
 
-button {
-  display: block;
-}
-
 input[type="text"] {
   padding: 7px;
   border: solid 1px #000;
@@ -50,10 +48,11 @@ input[type="text"]:focus {
 }
 
 button {
+  display: block;
   margin-bottom: 20px;
   border: none;
   padding: 8px 18px;
-  background: rgba(0,0,0,0.5);
+  background: #BF3D2D;
   color: #fff;
   border-radius: 3px;
   cursor: pointer;
@@ -67,20 +66,17 @@ section {
   margin-bottom: 80px;
 }
 
-table {
-
-}
-
 thead {
   font-weight: bold;
+  background: rgba(0,0,0,0.3);
 }
 
 td {
   padding: 20px;
-  border: solid 1px #dfe2e5;
+  border: solid 1px #BF3D2D;
   text-align: center;
 }
 
 tr:nth-child(2n) {
-  background: #f6f8fa;
+  background: rgba(0,0,0,0.3);
 }
