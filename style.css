@@ -55,7 +55,6 @@ main {
   width: 90%;
   margin: 0 auto;
   margin-top: 50px;
-  border: solid 1px;
 }
 
 .clearfix {
@@ -81,47 +80,6 @@ main {
   width: 100%;
 }
 
-.shirt {
-  float: left;
-  margin-left: 65px;
-  position: relative;
-}
-
-.shirt img {
-  width: 400px;
-}
-
-.shirt p {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}
-
-.about {
-  width: 500px;
-  margin: 0 auto;
-  margin-top: 90px;
-}
-
-.about p {
-  margin-top: 30px
-}
-
-.order {
-  width: 760px;
-  margin: 0 auto;
-  margin-top: 60px;
-  text-align: center;
-}
-
-.order img, button {
-  margin-top: 30px;
-}
-
-.product {
-  display: block;
-  margin: 0 auto
-}
 
 
 
