@@ -109,15 +109,6 @@ main {
   margin: 0 auto
 }
 
-span {
-  margin-top: 60px;
-  width: 180px;
-  padding: 20px 0;
-  display: inline-block;
-  text-align: center;
-  line-height: 1.5em;
-}
-
 .family {
   margin-top: 60px;
   text-align: center;
@@ -139,6 +130,22 @@ span {
 .method p {
   width: 300px;
   display: inline-block;
+  margin-bottom: 30px;
+}
+
+.locations {
+  width: 1200px;
+  margin: 0 auto;
+  margin-top: 60px;
+  text-align: center;
+}
+
+span {
+  width: 180px;
+  padding: 20px 0;
+  display: inline-block;
+  text-align: center;
+  line-height: 1.5em;
 }
 
 footer {
