@@ -31,6 +31,10 @@ header {
   z-index: 999;
 }
 
+header img {
+  width: 50px;
+}
+
 nav {
   width: 960px;
   margin: 0 auto;
@@ -105,17 +109,6 @@ main {
   margin: 0 auto
 }
 
-.wrapper {
-  position: relative;
-}
-
-.wrapper p {
-  display: inline-block;
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}
-
 span {
   margin-top: 60px;
   width: 180px;
@@ -125,11 +118,38 @@ span {
   line-height: 1.5em;
 }
 
+.family {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.family img {
+  margin-top: 30px;
+}
+
+.method {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.method h2 {
+  margin-bottom: 30px;
+}
+
+.method p {
+  width: 300px;
+  display: inline-block;
+}
+
 footer {
   margin-top: 30px;
   height: 140px;
   width: 100%;
   background: #3F140F;
+}
+
+footer img {
+  width: 100px;
 }
 
 .footer li {
