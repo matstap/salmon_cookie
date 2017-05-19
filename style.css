@@ -2,6 +2,11 @@
 
 /*GENERAL*/
 
+body {
+  background: rgba(202,119,108,0.19);
+  font-size: 20px;
+}
+
 h1 {
   font: 3.5em bold;
   color: #3F140F;
@@ -49,10 +54,6 @@ nav a {
   text-decoration: none;
 }
 
-body {
-  background: rgba(202,119,108,0.19);
-}
-
 main {
   width: 960px;
   margin: 0 auto;
@@ -78,7 +79,8 @@ main {
 }
 
 .about {
-  width: 760px;
+  text-align: center;
+  width: 500px;
   margin: 0 auto;
   margin-top: 120px;
 }
@@ -87,36 +89,40 @@ main {
   margin-top: 30px
 }
 
-.order {
-  width: 760px;
+.shop {
   margin: 0 auto;
   margin-top: 60px;
   text-align: center;
 }
 
-.order img, button {
-  margin-top: 30px;
+.shop h2 {
+  margin-bottom: 30px;
 }
 
-.product {
-  display: block;
+.shop img {
+  padding: 0 15px;
+  height: 300px;
   margin: 0 auto
 }
 
+.wrapper {
+  position: relative;
+}
 
+.wrapper p {
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
 
 span {
   margin-top: 60px;
   width: 180px;
   padding: 20px 0;
   display: inline-block;
-  border-right: dotted 5px;
   text-align: center;
   line-height: 1.5em;
-}
-
-span:last-child {
-  border-right: 0px;
 }
 
 footer {
