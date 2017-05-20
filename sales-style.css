@@ -1,7 +1,6 @@
 
 body {
   font-family: helvetica;
-  color: #3F140F;
   background: rgba(202,119,108,0.19);
 }
 
@@ -53,6 +52,7 @@ button {
   border: none;
   padding: 8px 18px;
   background: #BF3D2D;
+  font-family: Veranda;
   color: #fff;
   border-radius: 3px;
   cursor: pointer;

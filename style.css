@@ -4,6 +4,7 @@
 
 body {
   background: rgba(202,119,108,0.19);
+  font-family: helvetica;
   font-size: 20px;
 }
 
@@ -12,12 +13,14 @@ body {
 }
 
 h1 {
-  font: 3.5em bold;
+  font-family: Molle;
+  font-size: 3em;
   color: #3F140F;
 }
 
 h2 {
-  font: 2em bold;
+  font-size: 2em;
+  font-weight: bold;
 }
 
 button {
@@ -168,4 +171,8 @@ footer img {
   color: white;
   float:right;
   margin-top: 70px;
+}
+
+footer, header {
+  font-family: Veranda;
 }
