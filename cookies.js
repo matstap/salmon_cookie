@@ -4,6 +4,7 @@ var tabH = document.getElementById('tabHead');
 var tabB = document.getElementById('tabBody');
 
 var form = document.getElementById('sales_form');
+var formRmv = document.getElementById('remove_form');
 
 // row # hack
 var rowNum = 0;
@@ -108,10 +109,39 @@ function formData(event) {
   var avgPerSale = parseInt(event.target.perSale.value);
 
   var store = new Store(loc, minCust, maxCust, avgPerSale);
+
+  for (var i = 0; i < rowNum; i++) {
+    if (loc === tabB.children[i].children[0].innerHTML) {
+      tabB.deleteRow(i);
+      rowNum -= 1;
+      tabB.deleteRow(rowNum);
+      store.render();
+      colSums();
+      form.reset();
+      return;
+    }
+  }
+
   tabB.deleteRow(rowNum);
   store.render();
   colSums();
   form.reset();
+}
+
+function formRemove(event) {
+  event.preventDefault();
+
+  var loc = event.target.removeStore.value;
+
+  for (var i = 0; i < rowNum; i++) {
+    if (loc === tabB.children[i].children[0].innerHTML && rowNum > 0) {
+      tabB.deleteRow(i);
+      rowNum -= 1;
+      tabB.deleteRow(rowNum);
+      colSums();
+      formRmv.reset();
+    }
+  }
 }
 
 addHeadder(hours);
@@ -122,3 +152,4 @@ capitolHill.render();
 alkai.render();
 colSums();
 form.addEventListener('submit', formData);
+formRmv.addEventListener('submit', formRemove);
