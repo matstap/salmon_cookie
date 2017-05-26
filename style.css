@@ -2,13 +2,25 @@
 
 /*GENERAL*/
 
+body {
+  background: rgba(202,119,108,0.19);
+  font-family: helvetica;
+  font-size: 20px;
+}
+
+.clearfix {
+  clear: both;
+}
+
 h1 {
-  font: 3.5em bold;
+  font-family: Molle;
+  font-size: 3em;
   color: #3F140F;
 }
 
 h2 {
-  font: 2em bold;
+  font-size: 2em;
+  font-weight: bold;
 }
 
 button {
@@ -24,6 +36,10 @@ header {
   width: 100%;
   background: #3F140F;
   z-index: 999;
+}
+
+header img {
+  width: 50px;
 }
 
 nav {
@@ -47,10 +63,6 @@ nav li:first-child {
 nav a {
   color: white;
   text-decoration: none;
-}
-
-body {
-  background: rgba(202,119,108,0.19);
 }
 
 main {
@@ -78,7 +90,8 @@ main {
 }
 
 .about {
-  width: 760px;
+  text-align: center;
+  width: 500px;
   margin: 0 auto;
   margin-top: 120px;
 }
@@ -87,51 +100,68 @@ main {
   margin-top: 30px
 }
 
-.order {
-  width: 760px;
+.shop {
   margin: 0 auto;
   margin-top: 60px;
   text-align: center;
 }
 
-.order img, button {
-  margin-top: 30px;
+.shop h2 {
+  margin-bottom: 30px;
 }
 
-.product {
-  display: block;
+.shop img {
+  padding: 0 15px;
+  height: 300px;
   margin: 0 auto
 }
 
-
-
-span {
+.family {
   margin-top: 60px;
-  width: 180px;
-  padding: 20px 0;
-  display: inline-block;
-  border-right: dotted 5px;
   text-align: center;
-  line-height: 1.5em;
 }
 
-span:last-child {
-  border-right: 0px;
+.family img {
+  margin-top: 30px;
+}
+
+.method {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.method h2 {
+  margin-bottom: 30px;
+}
+
+.method p {
+  width: 300px;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.loc {
+  margin: 60px 0;
+  text-align: center;
 }
 
 footer {
   margin-top: 30px;
-  height: 140px;
+  height: 150px;
   width: 100%;
   background: #3F140F;
 }
 
-.footer li {
+footer img {
+  width: 100px;
+}
+
+.footnav li {
   margin-left: 120px;
   margin-top: 70px;
 }
 
-.footer li:first-child {
+.footnav li:first-child {
   margin-left: 0;
   margin-top: 20px;
   float: left;
@@ -141,4 +171,8 @@ footer {
   color: white;
   float:right;
   margin-top: 70px;
+}
+
+footer, header {
+  font-family: Veranda;
 }
